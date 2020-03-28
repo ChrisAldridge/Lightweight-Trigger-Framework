@@ -10,20 +10,20 @@
  * @date Sat Dec 29, 2018
  */
 public class AccountTriggerHandler implements ITriggerHandler {
-  /* 
-    Allows unit tests (or other code) to disable this trigger for the transaction
-    To stop this trigger from firing while in a unit test, I could just add the following code to the test:
-    AccountTriggerHandler.TriggerDisabled = true;
-  */
+  /**
+   * Allows unit tests (or other code) to disable this trigger for the transaction
+   * To stop this trigger from firing while in a unit test, I could just add the following code to the test:
+   * AccountTriggerHandler.TriggerDisabled = true;
+   */
   public static Boolean TriggerDisabled = false;
-  /*
-    Checks to see if the trigger has been disabled. For example, you could check a custom setting here.
-    In this example, a static property is used to disable the trigger.
-    In a unit test, you could use AccountTriggerHandler.TriggerDisabled = true to completely disable the trigger.
-  */
+  /**
+   * Checks to see if the trigger has been disabled. For example, you could check a custom setting here.
+   * In this example, a static property is used to disable the trigger.
+   * In a unit test, you could use AccountTriggerHandler.TriggerDisabled = true to completely disable the trigger.
+   */
   public Boolean IsDisabled() {
     /*
-      Use the option below if you set up Custom Settings to controll Triggers
+      Use the option below if you set up Custom Settings to control Triggers
     */
     // if(TriggerSettings__c.AccountTriggerDisabled__c = true) {
     //   return true;
