@@ -35,7 +35,7 @@ public class TriggerDispatcher {
       } when AFTER_DELETE {
         handler.AfterDelete(trigger.oldMap);
       } when AFTER_UNDELETE {
-        handler.AfterUndelete(trigger.oldMap);
+        handler.AfterUndelete(trigger.newMap);
       }
     }  
   }
